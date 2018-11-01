@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fanfeng.drawingboraddemo.MainActivity">
+
+    <com.example.fanfeng.drawingboraddemo.DrawingBoradView
+        android:id="@+id/dvCanvas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnPen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="笔"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="10dp"
+        />
+
+    <Button
+        android:id="@+id/btnEraser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="橡皮"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btnPen"
+        android:layout_margin="10dp"
+        />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清除"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btnEraser"
+        android:layout_margin="10dp"
+        />
+
+    <Button
+        android:id="@+id/btnSync"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开启同步"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btnClear"
+        android:layout_margin="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/ivRed"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/shape_bg_red"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/ivGreen"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/shape_bg_green"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivRed"
+        android:layout_margin="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/ivBlue"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/shape_bg_blue"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivGreen"
+        android:layout_margin="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/ivBlack"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/shape_bg_black"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivBlue"
+        android:layout_margin="10dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:padding="1dp"
+        android:background="#000000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"
+        >
+
+        <com.example.fanfeng.drawingboraddemo.DrawingBoradView
+            android:id="@+id/dvCanvasPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFF"
+            />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
